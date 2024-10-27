@@ -5,7 +5,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:mytodo/models/task_model.dart';
 import 'package:mytodo/providers/category_provider.dart';
-import 'package:mytodo/providers/date_provider.dart' hide String;
+import 'package:mytodo/providers/date_provider.dart';
 
 import 'package:mytodo/providers/description_provider.dart';
 import 'package:mytodo/providers/iscompleted_provider.dart';

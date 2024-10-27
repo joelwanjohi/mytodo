@@ -1,8 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:mytodo/firebase_options.dart';
 import 'package:mytodo/screens/splash_screen.dart';
 import 'package:mytodo/theme/theme.dart';
+import 'package:signals/signals_flutter.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
