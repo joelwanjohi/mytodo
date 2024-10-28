@@ -41,7 +41,7 @@ class PasswordScreenState extends ConsumerState<PasswordScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'RESET PASSWORD',
+                  'Reset Password',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -52,7 +52,7 @@ class PasswordScreenState extends ConsumerState<PasswordScreen> {
                   controller: emailController,
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.email),
-                    labelText: 'EMAIL',
+                    labelText: 'Email',
                   ),
                 ),
                 const SizedBox(height: 16.0),
@@ -100,7 +100,7 @@ class PasswordScreenState extends ConsumerState<PasswordScreen> {
                                 ),
                               )
                             : const Text(
-                                'SEND RESET EMAIL',
+                                'Reset Email',
                               ),
                       ),
                     ),
@@ -110,7 +110,7 @@ class PasswordScreenState extends ConsumerState<PasswordScreen> {
                   onPressed: () {
                     Navigation.navigateToLoginScreen(context);
                   },
-                  child: const Text('BACK TO LOGIN'),
+                  child: const Text('Back to login'),
                 ),
               ],
             ),

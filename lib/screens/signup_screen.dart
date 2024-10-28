@@ -54,7 +54,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'SIGN UP',
+                  'Sign Up',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -68,7 +68,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
                   },
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.person_2_rounded),
-                    labelText: 'USERNAME',
+                    labelText: 'Username',
                   ),
                 ),
                 const SizedBox(height: 8.0),
@@ -79,7 +79,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
                   },
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.email),
-                    labelText: 'EMAIL',
+                    labelText: 'email',
                   ),
                 ),
                 const SizedBox(height: 8.0),
@@ -88,7 +88,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
                   obscureText: isPasswordObscured,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.lock),
-                    labelText: 'PASSWORD',
+                    labelText: 'password',
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -107,7 +107,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
                   obscureText: isConfirmPasswordObscured,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.lock),
-                    labelText: 'CONFIRM PASSWORD',
+                    labelText: 'confirm password',
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
@@ -170,7 +170,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
                                 ),
                               )
                             : const Text(
-                                'SIGN UP',
+                                'sign up',
                               ),
                       ),
                     ),
@@ -180,7 +180,7 @@ class SignupScreenState extends ConsumerState<SignupScreen> {
                   onPressed: () {
                     Navigation.navigateToLoginScreen(context);
                   },
-                  child: const Text('BACK TO LOGIN'),
+                  child: const Text('Back To Login '),
                 ),
               ],
             ),

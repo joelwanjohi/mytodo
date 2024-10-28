@@ -46,7 +46,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'LOGIN',
+                  'login',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -61,7 +61,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                   },
                   decoration: const InputDecoration(
                     prefixIcon: Icon(Icons.email),
-                    labelText: 'EMAIL',
+                    labelText: 'email',
                   ),
                 ),
                 const SizedBox(height: 8.0),
@@ -70,7 +70,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                   obscureText: isPasswordObscured,
                   decoration: InputDecoration(
                     prefixIcon: const Icon(Icons.lock),
-                    labelText: 'PASSWORD',
+                    labelText: 'password',
                     suffixIcon: IconButton(
                       onPressed: () {
                         setState(() {
