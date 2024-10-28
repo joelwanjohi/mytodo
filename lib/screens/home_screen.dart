@@ -47,7 +47,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'Get Sh_t Done',
+                  'Get UR Task Done',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
@@ -160,7 +160,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                         ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(
                             content: Text(
-                              'Pomodoro timer is coming!',
+                              'Timer is coming!',
                             ),
                             behavior: SnackBarBehavior.floating,
                           ),
