@@ -91,7 +91,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                         onPressed: () {
                           Navigation.navigateToSignupScreen(context);
                         },
-                        child: const Text('SIGN UP'),
+                        child: const Text('Sign up'),
                       ),
                     ),
                     const SizedBox(width: 16.0),
@@ -138,7 +138,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                                 ),
                               )
                             : const Text(
-                                'LOG IN',
+                                'Login',
                               ),
                       ),
                     ),
@@ -152,7 +152,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                       onPressed: () {
                         Navigation.navigateToPasswordScreen(context);
                       },
-                      child: const Text('FORGOT PASSWORD'),
+                      child: const Text('Forgot Password'),
                     ),
                     TextButton(
                       onPressed: () {
@@ -165,7 +165,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                           showSuccessSnack(context, success);
                         });
                       },
-                      child: const Text('SNEAK PEEK'),
+                      child: const Text('Sneak peek'),
                     ),
                   ],
                 ),
