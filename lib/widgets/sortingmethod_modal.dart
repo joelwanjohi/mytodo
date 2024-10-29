@@ -32,7 +32,7 @@ class SortingMethodModalState extends ConsumerState<SortingMethodModal> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Text(
-            'Sort your sh_t',
+            'Sort your task',
             style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.bold,

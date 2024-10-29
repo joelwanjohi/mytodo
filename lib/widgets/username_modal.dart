@@ -51,7 +51,7 @@ class UsernameModalState extends ConsumerState<UsernameModal> {
               ref.read(displayNameProvider.notifier).state = value;
             },
             decoration: const InputDecoration(
-              labelText: 'NEW USERNAME',
+              labelText: 'new username',
             ),
           ),
           const SizedBox(height: 16.0),
@@ -107,7 +107,7 @@ class UsernameModalState extends ConsumerState<UsernameModal> {
                             padding: EdgeInsets.symmetric(vertical: 8.0),
                             child: CircularProgressIndicator(),
                           )
-                        : const Text('SAVE'),
+                        : const Text('save'),
                   ),
                 ),
               ],

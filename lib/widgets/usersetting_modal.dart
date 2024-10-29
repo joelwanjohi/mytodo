@@ -65,7 +65,7 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
               }
             },
             title: Text(ref.watch(displayNameProvider)),
-            subtitle: const Text('CHANGE YOUR PROFILE'),
+            subtitle: const Text('change your profile'),
             trailing: FaIcon(ref.watch(smileyProvider)),
           ),
 
