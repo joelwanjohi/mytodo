@@ -2,6 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:uuid/uuid.dart';
 
+//universally unique identifiers
 Uuid uuid = const Uuid();
 
 class Task {

@@ -67,7 +67,7 @@ Computed<ThemeData> cThemeLight = computed(() {
     visualDensity: FlexColorScheme.comfortablePlatformDensity,
     useMaterial3: true,
     swapLegacyOnMaterial3: true,
-    fontFamily: GoogleFonts.bebasNeue().fontFamily,
+    // fontFamily: GoogleFonts.bebasNeue().fontFamily,
   );
 });
 
@@ -126,7 +126,8 @@ Computed<ThemeData> cThemeDark = computed(() {
     visualDensity: FlexColorScheme.comfortablePlatformDensity,
     useMaterial3: true,
     swapLegacyOnMaterial3: true,
-    fontFamily: GoogleFonts.bebasNeue().fontFamily,
+    fontFamily: 'Times New Roman',
+
   );
 });
 

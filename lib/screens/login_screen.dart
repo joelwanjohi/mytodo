@@ -46,7 +46,7 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'login',
+                  'LOGIN',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
