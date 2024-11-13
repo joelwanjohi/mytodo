@@ -1,0 +1,19 @@
+{
+  "name": "my-first-docker-app",
+  "version": "1.0.0",
+  "description": "My first Docker application with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["docker", "nodejs", "express"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

@@ -154,19 +154,19 @@ class LoginScreenState extends ConsumerState<LoginScreen> {
                       },
                       child: const Text('Forgot Password'),
                     ),
-                    TextButton(
-                      onPressed: () {
-                        // Sneak peek user. Show snackbar on success
-                        // or error.
-                        FirebaseService(ref).sneakPeek(
-                            // If everything goes well:
-                            (String success) {
-                          Navigation.navigateToHomeScreen(context);
-                          showSuccessSnack(context, success);
-                        });
-                      },
-                      child: const Text('Sneak peek'),
-                    ),
+                    // TextButton(
+                    //   onPressed: () {
+                    //     // Sneak peek user. Show snackbar on success
+                    //     // or error.
+                    //     FirebaseService(ref).sneakPeek(
+                    //         // If everything goes well:
+                    //         (String success) {
+                    //       Navigation.navigateToHomeScreen(context);
+                    //       showSuccessSnack(context, success);
+                    //     });
+                    //   },
+                    //   child: const Text('Sneak peek'),
+                    // ),
                   ],
                 ),
               ],
