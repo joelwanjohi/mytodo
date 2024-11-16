@@ -1,0 +1,106 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+<h1>CSS Properties</h1>
+<br>
+<div class="container shadow-sm" style="background-color: #FFF8F3;">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Links</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab2">Labels</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab3">Buttons</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab4">Alerts</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab5">Progress Bar</a>
+        </li>
+    </ul>
+    <div class="tab-content py-5">
+        <div id="tab1" class="tab-pane active">
+            <div class="col-12 mb-4 d-lg-inline-flex justify-content-center">
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://www.workinglinks.co.uk/" target="_blank" style="color: red;">Link 1</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://www.google.co.in/" target="_blank" style="color: blue;">Link 2</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://jalatechnologies.com/" target="_blank" style="color: green;">Link 3</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="http://www.growictech.com/" target="_blank" style="color: violet;">Link 4</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://www.linkedin.com/feed/" target="_blank" style="color: orange;">Link 5</a></li>
+            </div>
+        </div>
+        <div id="tab2" class="tab-pane">
+            <div class="col-12 mb-4 d-lg-inline-flex justify-content-center gap-3">
+                <span class="badge text-bg-primary">Primary</span>
+                <span class="badge text-bg-secondary">Secondary</span>
+                <span class="badge text-bg-success">Success</span>
+                <span class="badge text-bg-danger">Danger</span>
+                <span class="badge text-bg-warning">Warning</span>
+                <span class="badge text-bg-info">Info</span>
+                <span class="badge text-bg-light">Light</span>
+                <span class="badge text-bg-dark">Dark</span>
+            </div>
+        </div>
+        <div id="tab3" class="tab-pane">
+            <div class="col-12 mb-4 d-lg-inline-flex justify-content-center gap-2">
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-secondary">Secondary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-light">Light</button>
+                <button type="button" class="btn btn-dark">Dark</button>
+            </div>
+        </div>
+        <div id="tab4" class="tab-pane">
+            <div class="col-12 mb-4">
+                <div class="alert alert-primary" role="alert">
+                    A simple primary alert—check it out!
+                </div>
+                <div class="alert alert-secondary" role="alert">
+                    A simple secondary alert—check it out!
+                </div>
+                <div class="alert alert-success" role="alert">
+                    A simple success alert—check it out!
+                </div>
+                <div class="alert alert-danger" role="alert">
+                    A simple danger alert—check it out!
+                </div>
+                <div class="alert alert-warning" role="alert">
+                    A simple warning alert—check it out!
+                </div>
+                <div class="alert alert-info" role="alert">
+                    A simple info alert—check it out!
+                </div>
+                <div class="alert alert-light" role="alert">
+                    A simple light alert—check it out!
+                </div>
+                <div class="alert alert-dark" role="alert">
+                    A simple dark alert—check it out!
+                </div>
+            </div>
+        </div>
+        <div id="tab5" class="tab-pane">
+            <div class="col-12 mb-4 ">
+                <div class="progress" role="progressbar " aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-success " style="width: 25%"></div>
+                </div>
+                <br>
+                <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-info" style="width: 50%"></div>
+                </div>
+                <br>
+                <div class="progress" role="progressbar" aria-label="Warning example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-warning" style="width: 75%"></div>
+                </div>
+                <br>
+                <div class="progress" role="progressbar" aria-label="Danger example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar bg-danger" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,105 @@
+{%extends 'sidebar.html'%}
+{%block content%}
+<link rel="stylesheet" href="style.css">
+<h1>Popup</h1>
+<br>
+<div class="container  " style="background-color: #FFF8F3;">
+    <ul class="nav nav-tabs">
+      <li class="nav-item active-tab">
+        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Pop Up</a>
+      </li>
+    </ul>
+    <div class="tab-content border-black">
+      <div id="tab1" class="tab-pane active border-black ">
+        <div class="row pY-5 my-3">
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="https://www.google.com" target="_blank" btn btn-primary>Popup1</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="https://www.tutorialspoint.com/index.htm" target="_blank" btn btn-primary>Popup2</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="https://www.tutorialsteacher.com/" target="_blank" btn btn-primary>Popup3</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="https://www.javatpoint.com/java-tutorial" target="_blank" btn btn-primary>Popup Duplicate</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="http://127.0.0.1:8000/" target="_blank" btn btn-primary>Duplicate Tab</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="#" btn btn-primary data-bs-toggle="modal" data-bs-target="#popupModal2">In Window PopUp</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="#" btn btn-primary onclick="showAlert()">Alert Box</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="#" btn btn-primary onclick="showConfirm()">Confirm Box</a>
+                </div>
+            </div>
+            <div class="col-4 mb-4">
+                <div class="card py-2 my-2 text-center">
+                    <a href="#" btn btn-primary onclick="showPrompt()">Prompt Box</a>
+                </div>
+            </div>
+        </div>
+        <div id="userInputContainer" class="mt-4"></div>
+
+        <div class="modal fade" id="popupModal2" tabindex="-1" aria-labelledby="popupModal2Label" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="popupModal2Label">In Window PopUp</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        This is an important message for In Window PopUp. You can place any relevant information here, such as alerts, instructions, or notifications.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function showAlert() {
+                alert("This is Alert-Box");
+            }
+            function showConfirm() {
+                var userConfirmed = confirm("Do you want to proceed with Confirm Box?");
+                if (userConfirmed) {
+                    alert("You clicked OK. Proceeding with Confirm Box.");
+                } else {
+                    alert("You clicked Cancel. Confirm Box has been aborted.");
+                }
+            }
+            function showPrompt() {
+                var userInput = prompt("Please enter some text for Popup 5:");
+                if (userInput !== null && userInput.trim() !== "") {
+                    var userInputContainer = document.getElementById("userInputContainer");
+                    userInputContainer.innerHTML = "<p><strong>You entered:</strong> " + userInput + "</p>";
+                    setTimeout(function() {
+                        userInputContainer.innerHTML = "";
+                    }, 5000);
+                } else {
+                    alert("You didn't enter any text.");
+                }
+            }
+            </script>
+            
+{%endblock content%}

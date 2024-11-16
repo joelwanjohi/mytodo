@@ -1,0 +1,28 @@
+{%extends 'sidebar.html'%}
+{%block content%}
+<h1>i-Frames</h1>
+<br>
+<div class="container shadow-lg" style="background-color: #FFF8F3;">
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Links</a>
+        </li>
+    </ul>
+    <div class="tab-content py-5">
+        <div id="tab1" class="tab-pane active">
+            <h2 class="text-center">1st Frame</h2>
+            <div class="row mb-4 justify-content-center">
+                <div class="col-12 col-md-10">
+                    <iframe class="w-100" height="315" src="https://www.youtube.com/embed/azTMVFACDUw?si=Q-kJ07kT97IOl6c3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <h2 class="text-center">2nd Frame</h2>
+            <div class="row mb-4 justify-content-center">
+                <div class="col-12 col-md-10">
+                    <iframe class="w-100" height="315" src="https://www.youtube.com/embed/t1Ta_1nQs-Y?si=56I5QNtqC8kd4emQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{%endblock content%}

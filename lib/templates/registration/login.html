@@ -1,0 +1,33 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div class="mothercontainer">
+    <div class="container">
+        <div class="details-section">
+            <h3 class="text-center">Welcome to JALA Academy. Please sign in to access your account.</h3>
+        </div>
+        <div>
+         <p> <mark>Learn Everything on Real Time Scenarios. Free For All </mark></p>
+        </div> 
+        <div class="card"> 
+            <h6 class="my-2">Sign in</h6> 
+            <div class="card-body">
+                <h5 class="card-title text-center">Login</h5>
+<form method="post" class="form-control">
+    {% csrf_token%}
+    {% for fm in form%}
+    {{fm.label_tag}} {{fm}} {{fm.erros|striptags}} <br><br>
+    {%endfor%}
+    <button type="submit" class="btn btn-primary">Login</button>
+    <BR>
+    -OR-
+    <div class="py-1 my-1"><a  href="{%url 'Webpage:signup'%}" class="btn btn-info">Signup</a></div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+{%endblock content%}
+

@@ -1,0 +1,116 @@
+{% extends 'sidebar.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'emp.css' %}">
+<style>
+    .form-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h2 {
+        margin-bottom: 20px;
+    }
+    .search-container {
+        margin-bottom: 20px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock extra_css %}
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>Employee Details</h1>
+        <a href="{% url 'Webpage:create_emp' %}" class="btn btn-primary">Create Employee</a>
+    </div>
+<div class="container mt-5">
+    <div class="form-container">
+        <div class="search-container">
+            <h2 >Search Employees</h2>
+            <form action="{% url 'Webpage:search_employees' %}" method="get" class="row g-3">
+                <div class="col-md-3">
+                    <div class="form-group mb-10">
+                        <label for="search_firstname" class="form-label">First Name</label>
+                        <input type="text" name="search_firstname" id="search_firstname" class="form-control" placeholder="Enter First Name">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group mb-10">
+                        <label for="search_mobile" class="form-label">Mobile Number</label>
+                        <input type="text" name="search_mobile" id="search_mobile" class="form-control" placeholder="Enter Mobile Number">
+                    </div>
+                </div>
+                <div class="col-md-3 align-self-end">
+                    <button type="submit" class="btn btn-success">Search</button>
+                    <a href="{% url 'Webpage:show_detail' %}" class="btn btn-secondary ms-2">Clear</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Contact Number</th>
+                <th scope="col">Country</th>
+                <th scope="col">City</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for cand in candidate %}
+            <tr>
+                <th scope="row">{{ cand.id }}</th>
+                <td scope="row">{{ cand.firstname }}</td>
+                <td scope="row">{{ cand.lastname }}</td>
+                <td scope="row">{{ cand.birth }}</td>
+                <td scope="row">
+                    {% if cand.gender == 'Male' %}
+                        <i class="fas fa-male"></i> {{ cand.gender }}
+                    {% elif cand.gender == 'Female' %}
+                        <i class="fas fa-female"></i> {{ cand.gender }}
+                    {% endif %}
+                </td>
+                <td scope="row">{{ cand.mobile }}</td>
+                <td scope="row">{{ cand.country }}</td>
+                <td scope="row">{{ cand.city }}</td>
+                <td>
+                    <a href="{% url 'Webpage:update_data' cand.id %}" class="btn btn-primary btn-sm">Edit</a>
+                    <form action="{% url 'Webpage:delete_dataa' cand.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <input type="submit" class="btn btn-danger btn-sm" value="Delete">
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+            {% if candidate.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="/details/?page={{ candidate.previous_page_number }}">Previous</a>
+            </li>
+            {% endif %}
+            {% for n in total_page %}
+            <li class="page-item" aria-current="page">
+                <a class="page-link" href="/details/?page={{ n }}">{{ n }} <span class="sr-only"></span></a>
+            </li>
+            {% endfor %}
+            {% if candidate.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="/details/?page={{ candidate.next_page_number }}">Next</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="/details/?page={{ lastpage }}">Last</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock content %}

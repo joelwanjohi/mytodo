@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnus</title>
+    {%load static%}
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.lineicons.com/4.0/lineicons.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static 'styles.css'%}">
+    {% block extra_css %}
+    {%endblock extra_css%}
+</head>
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-grid-alt"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="/">JALA Academy</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="/" class="sidebar-link">
+                        <i class="lni lni-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#auth" aria-expanded="false" aria-controls="auth" onclick="event.stopPropagation();">
+                        <i class="lni lni-users"></i>
+                        <span>Employee</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="/create/" class="sidebar-link"> <i class="lni lni-circle-plus"></i> Create Employee</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/details/" class="sidebar-link"> <i class="lni lni-search-alt"></i> Search Employee</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse"
+                        data-bs-target="#Menu" aria-expanded="false" aria-controls="Menu" onclick="event.stopPropagation();" >
+                        <i class="lni lni-menu"></i>
+                        <span>More</span>
+                    </a>
+                    <ul id="Menu" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="/multiple/" class="sidebar-link"> <i class="lni lni-more"></i> Multiple tabs</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/menu/" class="sidebar-link"> <i class="lni lni-list"></i>Menu</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/autocomplete/" class="sidebar-link"> <i class="lni lni-checkmark-circle"></i>AutoComplete</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/collapsable/" class="sidebar-link"><i class="lni lni-layout"></i>Collapsable Content</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/images/" class="sidebar-link"><i class="lni lni-image"></i>Images</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/slider/" class="sidebar-link"><i class="lni lni-slideshare"></i>Slider</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/tooltip/" class="sidebar-link"><i class="lni lni-ruler-alt"></i></i>Tooltip</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/popup/" class="sidebar-link"><i class="lni lni-popup"></i>Popups</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/links/" class="sidebar-link"><i class="lni lni-link"></i>Links</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/css/" class="sidebar-link"><i class="lni lni-css3"></i>CSS Properties</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="/iframe/" class="sidebar-link"><i class="lni lni-frame-expand"></i>iFrames</a>
+                        </li>
+                    </ul>
+                </li>      
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="lni lni-cog"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <form id="logout-form" method="post" action="{% url 'Webpage:logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="but">
+                        <i class="lni lni-exit"></i>
+                        <span>Logout</span>
+                    </button>
+                </form>
+                
+                
+            </div>
+        </aside>
+        <div class="main p-3 pb-5">
+                {%block content%}
+
+                {%endblock content%}
+                
+        </div>      
+    </div>
+    
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+         
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="{%static 'script.js'%}"></script>
+    </body>
+</html>

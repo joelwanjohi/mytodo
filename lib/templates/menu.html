@@ -1,0 +1,123 @@
+{% extends 'sidebar.html'%}
+{%block extra_css%}
+<style>
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: #F2D7D5;
+        min-width: 160px;
+        z-index: 1;
+        border: 1px solid black; 
+        border-top: 1px solid black; 
+        padding: 0;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+    .dropdown {
+        position: relative;
+    }
+    
+    
+    .dropdown-content li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .dropdown-content li a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: black;
+        background-color: #F2D7D5;
+        border-bottom: 1px solid black;
+    }
+    
+    .dropdown-content li a:first-child {
+        border-top: 1px solid black; 
+    }
+    
+    .dropdown-content li a:hover {
+        background-color: #EF9C66;
+        color: #FFF;
+    }
+     
+</style>
+{%endblock extra_css%}
+{% block content %}
+<h1>Multiple Tabs</h1>
+<br>
+<div class="container" style="background-color: #FFF5E1;">
+  <ul class="nav nav-tabs">
+    <li class="nav-item active-tab">
+      <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Menu</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-bs-toggle="tab" href="#tab2">Sub Menu</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <br>
+    <div id="tab1" class="tab-pane active">
+      <div class="d-flex">
+        <div class="button-container d-flex flex-column col-5">
+          <button id="testing" class="py-1 my-2" style="background-color: #EF9C66;">Testing</button>
+          <button id="java" class="py-1 my-2" style="background-color: #EF9C66;">Java</button>
+          <button id="net" class="py-1 my-2" style="background-color: #EF9C66;">.NET</button>
+          <button id="db" class="py-1 my-2" style="background-color: #EF9C66;">Data Base</button>
+        </div>
+        <div id="message" class="ms-3 my-4"></div>
+      </div>
+    </div>
+    <div id="tab2" class="tab-pane">
+      <div class="d-flex">
+        <div class="button-container d-flex flex-column col-5">
+          <div class="dropdown">
+            <button class="py-2 my-1 dropbtn col-12" style="background-color: #EF9C66;">Testing</button>
+            <ul id="id1" class="dropdown-content">
+              <li><a href="#" id="selbtn">Selenium</a></li>
+              <li><a href="#" id="manualbtn">Manual Testing</a></li>
+              <li><a href="#" id="dbbtn">DB Testing</a></li>
+              <li><a href="#" id="unitbtn">Unit Testing</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="py-2 my-1 dropbtn col-12" style="background-color: #EF9C66;">JAVA</button>
+            <ul class="dropdown-content">
+              <li><a href="#" id="advjavabtn">Adv Java</a></li>
+              <li><a href="#" id="corejavabtn">Core Java</a></li>
+              <li><a href="#" id="springbtn">Spring</a></li>
+              <li><a href="#" id="hibernatebtn">Hibernate</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="py-2 my-1 dropbtn col-12" style="background-color: #EF9C66;">.Net</button>
+            <ul class="dropdown-content">
+              <li><a href="#" id="cbtn">C#</a></li>
+              <li><a href="#" id="aspbtn">ASP.NET</a></li>
+              <li><a href="#" id="adobtn">ADO.NET</a></li>
+              <li><a href="#" id="mvcbtn">MVC</a></li>
+            </ul>
+          </div>
+          <div class="dropdown">
+            <button class="py-2 my-1 dropbtn col-12" style="background-color: #EF9C66;">Database</button>
+            <ul class="dropdown-content">
+              <li><a href="#" id="sqlbtn">SQL</a></li>
+              <li><a href="#" id="mysqlbtn">My Sql</a></li>
+              <li><a href="#" id="oraclebtn">Oracle</a></li>
+              <li><a href="#" id="h2btn">H2</a></li>
+            </ul>
+          </div>
+        </div>
+        <div id="message" class="ms-3 my-4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

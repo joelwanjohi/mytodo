@@ -1,0 +1,32 @@
+{% extends 'sidebar.html' %}
+{% block content %}
+<h1>Tooltip</h1>
+<br>
+<div class="container " style="background-color: #FFF5E1;">
+  <ul class="nav nav-tabs">
+    <li class="nav-item active-tab">
+      <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Tool Tip</a>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div id="tab1" class="tab-pane active col-10">
+      <div class="col-md-12 text-center m-t-md my-5 py-5">
+        <button type="button" class="btn btn-primary btn-flat" id="btnTooltip" data-bs-toggle="tooltip" title="Thank you for being here!">Check the Tooltip Before You Click.</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function () {
+  $('[data-bs-toggle="tooltip"]').tooltip();
+
+  $('#btnTooltip').click(function () {
+    $(this).tooltip('hide'); 
+    $(this).attr('data-bs-original-title', 'You have already clicked the button');
+    setTimeout(() => {
+      $(this).tooltip('show'); 
+    }, 0.1); 
+  });
+});
+</script>
+{% endblock content %}

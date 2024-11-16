@@ -1,0 +1,54 @@
+{%extends 'sidebar.html'%}
+{%load static%}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'emp.css' %}">
+<style>
+    .form-container {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h2 {
+        margin-bottom: 20px;
+    }
+  
+</style>
+{% endblock extra_css %}
+{%block content%}
+<h1>Update Details</h1>
+<div class="container mt-5">
+    <div class="form-container">
+        <h2 class="text-center">Update Employee Details Form</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            {% for fm in form %}
+                                {% if fm.name == 'country' or fm.name == 'city' %}
+                                    <div class="col-md-6">
+                                        <div class="form-group mb-10 py-2 my-2">
+                                            {{ fm.label_tag }} {{ fm }}
+                                            <small class="text-danger">{{ fm.errors|striptags }}</small>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="col-12">
+                                        <div class="form-group mb-10 py-2 my-2">
+                                            {{ fm.label_tag }} {{ fm }}
+                                            <small class="text-danger">{{ fm.errors|striptags }}</small>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <input type="submit" value="Submit" class="btn btn-primary">   
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock content%}
