@@ -1,0 +1,33 @@
+{%extends 'sidebar.html'%}
+{% block content%}
+<h1>Slider</h1>
+<br>
+<div class="container " style="background-color: #FFF5E1;">
+    <ul class="nav nav-tabs" >
+      <li class="nav-item active-tab" >
+        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Slider Bar</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+        <div id="tab1" class="tab-pane active col-10">
+            <div class="slider-container col-8" style="background-color: #FFF5E1;">
+                <input type="range" min="0" max="100" value="50" id="myRange" class="col-10 py-3 my-3" oninput="updateSliderValue()">
+                <p>Current Slider value :<span id="demo">50</span></p>
+                
+              </div>
+
+              
+
+        </div>
+    </div>
+</div>
+<script>
+  function updateSliderValue() {
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("demo");
+      output.textContent = slider.value;
+  }
+  </script>
+
+
+{%endblock content%}

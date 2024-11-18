@@ -1,0 +1,52 @@
+{%extends 'sidebar.html'%}
+{%block content%}
+{%load static%}
+<h1>Links</h1>
+<br>
+<div class="container " style="background-color: #FFF8F3;">
+    <ul class="nav nav-tabs" >
+      <li class="nav-item active-tab" >
+        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Working links</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link "data-bs-toggle="tab" href="#tab2">Broken Links</a>
+  </li> 
+  <li class="nav-item">
+      <a class="nav-link "data-bs-toggle="tab" href="#tab3">Image Links</a>
+  </li> 
+  <li class="nav-item">
+    <a class="nav-link "data-bs-toggle="tab" href="#tab4">Status Codes</a>
+</li> 
+  
+      </ul>
+    <div class="tab-content py-5">
+      <div id="tab1" class="tab-pane active">
+        <div class="col-12 mb-4 d-lg-inline-flex justify-content-center">
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://www.workinglinks.co.uk/" target="_blank" style="color: red;" >Link 1</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://www.google.co.in/" target="_blank" style="color: blue;" >Link 2</a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="https://jalatechnologies.com/" target="_blank" style="color: green;" >Link 3</a></li>
+            
+        </div>
+        </div>
+      <div id="tab2" class="tab-pane">
+        <div class="col-12 mb-4 d-lg-inline-flex justify-content-center">
+            <li style="display: inline-block; margin-right: 10px;"><a href="https://magnus.jalatechnologies.com/Home/www.brokenlinkcheck.com/" target="_blank" style="color: red;" >Link 1</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="https://magnus.jalatechnologies.com/Home/www.brokenlinkcheck.com/" target="_blank" style="color: blue;" >Link 2</a></li>
+            <li style="display: inline-block; margin-right: 10px;"><a href="https://magnus.jalatechnologies.com/Home/www.brokenlinkcheck.com/" target="_blank" style="color: green;" >Link 3</a></li>
+        
+    </div>
+          
+        </div>
+        <div id="tab3" class="tab-pane active">
+            <div class="col-12 mb-4 d-lg-inline-flex justify-content-center">
+                <li style="display: inline-block; margin-right: 10px;"><a href="" target="_blank" style="color: red;" ><img src="{static 'images/1.png'}" alt=""></a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="" target="_blank" style="color: blue;" ><img src="" alt=""></a></li>
+                <li style="display: inline-block; margin-right: 10px;"><a href="" target="_blank" style="color: green;" ><img src="" alt=""></a></li>
+            
+        </div>
+         
+        </div>
+        <div id="tab4" class="tab-pane active">
+        </div>
+      </div>
+{%endblock content%}

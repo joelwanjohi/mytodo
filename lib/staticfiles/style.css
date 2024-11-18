@@ -1,0 +1,29 @@
+body{
+  background-color: #FFF5E1;
+}
+.custom-navbar{
+  background-color: #EF9C66;
+}
+.navbar-brand{
+  font-weight: bolder;
+  color: #102C57;
+}
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.mothercontainer{
+  display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 550px;
+}
+.form-control{
+  margin: 5px;
+
+
+}

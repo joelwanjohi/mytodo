@@ -1,0 +1,15 @@
+#id_gender, #id_skills{
+    display: inline-flex !important;
+}
+
+#id_gender>div {
+    padding-left: 20px;
+}
+
+#id_skills>div {
+    padding-left: 20px;
+}
+
+#id_email, #id_mobile{
+    display: inline-flex;
+}

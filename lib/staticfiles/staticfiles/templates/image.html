@@ -1,0 +1,23 @@
+{%extends 'sidebar.html'%}
+{%block content%}
+<div class="text-left">
+    <h1>Uploading/Downloading Image</h1>
+    <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">Upload</button>
+
+    </form>
+</div>
+
+<div class="imgcont">
+    <h2>Uploaded Images</h2>
+    <div id="image-list" class="image-grid">
+        {% for img in images%}
+        <div class="image-item">
+            <img src="{{img.image.url}}" alt="{{img.image}}" >
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

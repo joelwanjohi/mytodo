@@ -1,0 +1,50 @@
+{% extends 'sidebar.html'%}
+{%block content%}
+<h1>Multiple Tabs</h1>
+<br>
+<div class="container " style="background-color:  #FFF5E1;">
+  <ul class="nav nav-tabs" >
+    <li class="nav-item active-tab" >
+      <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Menu</a>
+    </li>
+    <li class="nav-item" >
+      <a class="nav-link "data-bs-toggle="tab" href="#tab2">Sub Menu</a>
+</li> 
+    </ul>
+  <div class="tab-content ">
+    
+    <div id="tab1" class="tab-pane active">
+        <div class="d-flex" >
+        <div class="button-container d-flex flex-column col-5">
+            <button id="testing"class="py-1 my-2" style="background-color: #EF9C66;">Testing</button>
+            <button id="java" class="py-1 my-2"  style="background-color: #EF9C66;">Java</button>
+            <button id="net" class="py-1 my-2"  style="background-color: #EF9C66;">.NET</button>
+            <button id="db" class="py-1 my-2"  style="background-color: #EF9C66;">Data Base</button>
+        </div>
+            <div id="message" class="ms-3 my-4"> </div>
+        </div>
+    </div>           
+    <div id="tab2" class="tab-pane">
+        <ul class="menu col-sm-4">
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Testing</a>
+            <ul id="id1" class="dropdown-content">
+                <li><a href="#" id="selbtn">Selenium</a></li>
+                <li><a href="#" id="manualbtn">Manual Testing</a></li>
+                <li><a href="#" id="dbbtn">DB Testing</a></li>
+                <li><a href="#" id="unitbtn">Unit Testing</a></li>
+            </ul>
+            
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        
+
+       </div>
+    </div>
+    </div>
+  
+{%endblock content%}

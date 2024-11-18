@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<div class="mothercontainer">
+    <div class="container"> 
+        <div class="card">  
+            <div class="card-body">
+                <h5 class="card-title text-center">Login</h5>
+<form method="post" class="form-control">
+    {% csrf_token%}
+    {% for fm in form%}
+    {{fm.label_tag}} {{fm}} {{fm.erros|striptags}} <br><br>
+    {%endfor%}
+    <button type="submit" class="btn btn-primary">submit</button>
+    <br>
+    <a href="{%url 'Webpage:signup'%}">Signup</a>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+{%endblock content%}
+

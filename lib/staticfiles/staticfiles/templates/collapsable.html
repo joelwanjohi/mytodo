@@ -1,0 +1,133 @@
+{%extends 'sidebar.html'%}
+{%block content%}
+<h1>Collapsable Content</h1>
+<div class="container " style="background-color:  #FFF5E1;">
+    <ul class="nav nav-tabs" >
+      <li class="nav-item active-tab" >
+        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Single Collapse</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link "data-bs-toggle="tab" href="#tab2">Multiple Collapse</a>
+  </li> 
+      </ul>
+    <div class="tab-content ">
+        <div id="tab1" class="tab-pane active">
+            <div class="d-flex flex-column gap-3 py-4 my-2">
+                <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Know Your Goals and Prioritize Wisely <span class="toggle-icon">+</span></a>
+                <div class="collapse multi-collapse" id="multiCollapseExample1">
+                    <div class="card card-body">
+                        <p>What are your priorities for the day? Make a list of your priorities and plan your day. The tasks of the day must be outlined with the most important and urgent ones on top.</p>
+                    <br>
+                    <p>Likewise, determine your short-term and long-term goals and evaluate your progress frequently.</p>
+                    </div>
+                </div>
+                <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Be Focused and Eliminate Distractions <span class="toggle-icon">+</span></a>
+                <div class="collapse multi-collapse" id="multiCollapseExample2">
+                    <div class="card card-body">
+                        <p>Are you really present physically and mentally. Try to block out all distractions so that you have</p>
+                    </div>
+                </div>
+                <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample3">Choose the Right Mentor to Suceed in career <span class="toggle-icon">+</span></a>
+                <div class="collapse multi-collapse" id="multiCollapseExample3">
+                    <div class="card card-body">
+                        <p>There is a big difference between a mentor and a coach</p>
+                        <br>
+                        <p>Mentoring is a long-term process based on mutual trust and respect. Coaching, on the other hand, is for a short period of time.</p>
+                        <p>The topmost priority of a mentor is to help develop skills that are not just relevant for the mentees in their present job, but also for the future. A mentor has the first-hand experience in the industry</p>
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+      </div>  
+      <div class="tab-content ">        
+      <div id="tab2" class="tab-pane">
+        <div class="d-flex flex-column gap-3 py-4 my-2">
+            <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample1tab2" role="button" aria-expanded="false" aria-controls="multiCollapseExample1tab2">Collaborate with collegues <span class="toggle-icon">+</span></a>
+            <div class="collapse multi-collapse" id="multiCollapseExample1tab2">
+                <div class="card card-body">
+                    <li>Teach and learn from each other</li>
+                    <li>Collaborate on lesson plans-Two minds are better than one.</li>
+                    <li>Build your own social network</li>
+                    <li>Get feedback regularly</li>
+                    <li>Work together to solve problems</li>
+                    <li>Become a teacher-leader</li>
+                    <li>Adopt a team mentality</li>
+                    <li>Ask for help</li>
+                    <li>Find a mentor</li>
+                    <li>Be open to new ideas</li>
+                </div>
+            </div>
+            <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample2tab2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2tab2">Learn anything Quickly <span class="toggle-icon">+</span></a>
+            <div class="collapse multi-collapse" id="multiCollapseExample2tab2">
+                <div class="card card-body">
+                    <li>Learn by doing. Always play with the code while learning1.</li>
+                    <li>Ask for help. You'll need it</li>
+                    <li>Identifying the problem that needs solving</li>
+                    <li>Seek out more online resources. There’s a wealth of content</li>
+                    <li>Don't just read the sample code. Tinker with it!</li>
+                    <li>Take breaks when debugging</li>
+                    <li>Keep Calm and Keep On Coding</li>
+                </div>
+            </div>
+            <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample3tab2" role="button" aria-expanded="false" aria-controls="multiCollapseExample3tab2">Reasons People Giveup on their Goals too Quickly <span class="toggle-icon">+</span></a>
+            <div class="collapse multi-collapse" id="multiCollapseExample3tab2">
+                <div class="card card-body">
+                    <li>They want the outcome more than they want to obtain a skill</li>
+                    <li>They do not have the discipline to stick with their idea long enough to see it live</li>
+                    <li>They get distracted by what someone else is doing</li>
+                    <li>They don't believe in themselves enough.</li>
+                    <li>They fail once--and never try again</li>
+                    <li>They don't learn how to discipline themselves</li>
+                    <li>They care more about the end result, not the process</li>
+                    <li>They surround themselves with people who are a negative influence.</li>
+                    <li>They would rather settle for short-term rewards</li>
+                    <li>They don't have a guaranteed path to achieve success</li>
+                    <li>They don’t have the discipline to work hard enough</li>
+                    <li>They become distracted by other aspects of their life</li>
+                    <li>They don't know that failure is normal</li>
+                </div>
+            </div>
+            <a class="btn d-flex justify-content-between align-items-center " style="background-color: #EF9C66;" data-bs-toggle="collapse" href="#multiCollapseExample4tab2" role="button" aria-expanded="false" aria-controls="multiCollapseExample4tab2">Signs of Settiling for Less in Life <span class="toggle-icon">+</span></a>
+            <div class="collapse multi-collapse" id="multiCollapseExample4tab2">
+                <div class="card card-body">
+                    <li>You are always tired</li>
+            <li>You keep saying "after"</li>
+            <li>You don’t think you can</li>
+            <li>You think a lot, but do little</li>
+            <li>You are playing small and you think it’s OK</li>
+            <li>WhatsApp, Facebook, and TV are the highlight of your day</li>
+            <li>You are not ready to break comfort</li>
+            <li>You rely on escapism</li>
+            <li>You have the exact same friends</li>
+            <li>You have no idea what you want</li>
+            <li>You don't think you deserve better</li>
+                </div>
+            </div>
+            
+
+
+            
+
+        </div>
+    </div>
+    
+       
+      
+  </div> 
+</div>
+
+
+<script>
+    document.querySelectorAll('.collapse').forEach(function (collapse) {
+        collapse.addEventListener('shown.bs.collapse', function () {
+            this.previousElementSibling.querySelector('.toggle-icon').textContent = '-';
+        });
+        collapse.addEventListener('hidden.bs.collapse', function () {
+            this.previousElementSibling.querySelector('.toggle-icon').textContent = '+';
+        });
+    });
+</script>
+{%endblock content%}

@@ -1,0 +1,95 @@
+{%extends 'sidebar.html'%}
+{%block content%}
+<h1>Auto Complete</h1>
+<br>
+<div class="container " style="background-color:  #FFF5E1;">
+    <ul class="nav nav-tabs" >
+      <li class="nav-item active-tab" >
+        <a class="nav-link active" data-bs-toggle="tab" href="#tab1">Menu</a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link "data-bs-toggle="tab" href="#tab2">Sub Menu</a>
+  </li> 
+      </ul>
+    <div class="tab-content ">
+      
+      <div id="tab1" class="tab-pane active">
+        <div class="form-group col-md-6">
+            <label for="txtSingleAutoComplete">Tags : </label>
+            <input id="txtSingleAutoComplete" name="txtSingleAutoComplete" class="form-control ui-autocomplete-input" type="text" autocomplete="on">
+        </div>
+          
+      </div>           
+      <div id="tab2" class="tab-pane">
+        <div class="form-group col-md-6">
+            <label for="txtMultipleAutoComplete">Tags : </label>
+            <input id="txtMultipleAutoComplete" name="txtMultipleAutoComplete" class="form-control ui-autocomplete-input" type="text" autocomplete="on">
+        </div>
+          
+  
+          
+  
+         </div>
+      </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script>
+        $(document).ready(function() {
+            // Sample tags data
+            var availableTags = [
+                "ActionScript",
+                "AppleScript",
+                "Asp",
+                "BASIC",
+                "C",
+                "C++",
+                "Clojure",
+                "COBOL",
+                "ColdFusion",
+                "Erlang",
+                "Fortran",
+                "Groovy",
+                "Haskell",
+                "Java",
+                "JavaScript",
+                "Lisp",
+                "Perl",
+                "PHP",
+                "Python",
+                "Ruby",
+                "Scala",
+                "Scheme"
+            ];
+        
+            // Single Autocomplete
+            $("#txtSingleAutoComplete").autocomplete({
+                source: availableTags
+            });
+        
+            // Multiple Autocomplete
+            $("#txtMultipleAutoComplete").autocomplete({
+                source: availableTags,
+                select: function(event, ui) {
+                    var terms = this.value.split(", ");
+                    // Remove the current input
+                    terms.pop();
+                    // Add the selected item
+                    terms.push(ui.item.value);
+                    // Add placeholder to get the comma-and-space at the end
+                    terms.push("");
+                    this.value = terms.join(", ");
+                    return false;
+                }
+            });
+        });
+        
+      </script>
+
+
+
+
+
+{%endblock content%}
