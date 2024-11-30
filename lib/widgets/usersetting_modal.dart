@@ -120,28 +120,28 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
           // ),
 
           // Sign out listtile.
-          ListTile(
-            onTap: () async {
-              if (ref.watch(isSneakPeekerProvider)) {
-                Navigation.navigateToLoginScreen(context);
-                showSuccessSnack(context);
-              } else {
-                await showModalBottomSheet<BottomSheet>(
-                  isScrollControlled: true,
-                  showDragHandle: true,
-                  context: context,
-                  builder: (BuildContext context) {
-                    return const SignoutModal();
-                  },
-                );
-              }
-            },
-            title: const Text('SIGN OUT'),
-            subtitle: const Text('BACK TO LOGIN'),
-            trailing: const FaIcon(
-              FontAwesomeIcons.personWalkingDashedLineArrowRight,
-            ),
-          ),
+          // ListTile(
+          //   onTap: () async {
+          //     if (ref.watch(isSneakPeekerProvider)) {
+          //       Navigation.navigateToLoginScreen(context);
+          //       showSuccessSnack(context);
+          //     } else {
+          //       await showModalBottomSheet<BottomSheet>(
+          //         isScrollControlled: true,
+          //         showDragHandle: true,
+          //         context: context,
+          //         builder: (BuildContext context) {
+          //           return const SignoutModal();
+          //         },
+          //       );
+          //     }
+          //   },
+          //   title: const Text('Sign Out'),
+          //   subtitle: const Text('BACK'),
+          //   trailing: const FaIcon(
+          //     FontAwesomeIcons.personWalkingDashedLineArrowRight,
+          //   ),
+          // ),
           // Delete user listtile.
           ListTile(
             onTap: () async {
@@ -158,8 +158,8 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
                 );
               }
             },
-            title: const Text('DELETE ACCOUNT'),
-            subtitle: const Text('PERMANENTLY REMOVE YOUR DATA'),
+            title: const Text('Delete Account'),
+            subtitle: const Text('Remove'),
             trailing: const FaIcon(FontAwesomeIcons.trashCan),
           ),
         ],
