@@ -58,7 +58,7 @@ class SearchTaskModalState extends ConsumerState<SearchTaskModal> {
               ref.read(searchTaskProvider.notifier).state = value;
             },
             decoration: const InputDecoration(
-              labelText: 'Enter keyword',
+              prefixIcon: Icon(Icons.search),
             ),
           ),
           const SizedBox(height: 16.0),
