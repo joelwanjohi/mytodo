@@ -104,7 +104,7 @@ class NewTaskModalState extends ConsumerState<NewTaskModal> {
                 },
                 maxLines: 3,
                 decoration: const InputDecoration(
-                  labelText: 'New Task Description',
+                  labelText: 'Description',
                 ),
               ),
               const SizedBox(height: 16.0),
