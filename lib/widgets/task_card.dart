@@ -192,7 +192,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
                                               ],
                                             ),
                                             const Divider(
-                                              thickness: 4,
+                                              thickness: 2,
                                             ),
                                             const SizedBox(height: 8.0),
                                             TimePickerDialog(
@@ -203,9 +203,8 @@ class TaskCardState extends ConsumerState<TaskCard> {
                                       },
                                     );
                                   },
-                                  icon: const FaIcon(
-                                    FontAwesomeIcons.arrowsToCircle,
-                                  ),
+                                 icon: const FaIcon(FontAwesomeIcons.eyeSlash)
+
                                 ),
                                 const SizedBox(width: 8.0),
                                 Column(
