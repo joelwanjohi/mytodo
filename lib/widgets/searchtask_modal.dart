@@ -50,7 +50,7 @@ class SearchTaskModalState extends ConsumerState<SearchTaskModal> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Divider(thickness: 4.0),
+          const Divider(thickness: 1.0),
           const SizedBox(height: 16.0),
           TextField(
             controller: searchController,
