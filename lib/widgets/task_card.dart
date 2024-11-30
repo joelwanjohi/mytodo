@@ -101,7 +101,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
                               maxLines: 1,
                               overflow: TextOverflow.fade,
                               style: TextStyle(
-                                fontSize: 22.0,
+                                fontSize: 20.0,
                                 color: widget.task.isCompleted
                                     ? isDarkMode
                                         ? cFlexSchemeDark().outline
@@ -114,10 +114,10 @@ class TaskCardState extends ConsumerState<TaskCard> {
                             ),
                             subtitle: Text(
                               widget.task.description ?? 'No Description',
-                              maxLines: 3,
+                              maxLines: 4,
                               overflow: TextOverflow.fade,
                               style: TextStyle(
-                                fontSize: 14.0,
+                                fontSize: 13.0,
                                 color: widget.task.isCompleted
                                     ? sIsDark.value
                                         ? cFlexSchemeDark().outline
@@ -140,7 +140,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
                                       color: sIsDark.value
                                           ? cFlexSchemeDark().primary
                                           : cFlexSchemeLight().primary,
-                                      size: 32.0,
+                                      size: 20.0,
                                     ),
                                   )
                                 : GestureDetector(
@@ -152,13 +152,13 @@ class TaskCardState extends ConsumerState<TaskCard> {
                                     },
                                     child: const FaIcon(
                                       FontAwesomeIcons.circle,
-                                      size: 32.0,
+                                      size: 20.0,
                                     ),
                                   ),
                           ),
                         ),
                         const SizedBox(height: 8.0),
-                        const Divider(thickness: 2.0),
+                        // const Divider(thickness: 2.0),
                         const SizedBox(height: 4.0),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -233,7 +233,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
             alignment: Alignment.topRight,
             child: ConfettiWidget(
               confettiController: confettiController,
-              numberOfParticles: 20,
+              numberOfParticles: 150,
             ),
           ),
         ],
