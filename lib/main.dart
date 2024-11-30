@@ -19,7 +19,7 @@ class MainEntry extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Get Sh_t Done',
+      title: 'Get ur Tasks Done',
       theme: sIsDark.watch(context)
           ? cThemeDark.watch(context)
           : cThemeLight.watch(context),
