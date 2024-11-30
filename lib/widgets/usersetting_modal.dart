@@ -65,7 +65,7 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
               }
             },
             title: Text(ref.watch(displayNameProvider)),
-            subtitle: const Text('change your profile'),
+            subtitle: const Text('profile emoji'),
             trailing: FaIcon(ref.watch(smileyProvider)),
           ),
 
@@ -88,36 +88,36 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
             title: sIsDark.watch(context)
                 ? const Text('Dark Mode')
                 : const Text('Light Mode'),
-            subtitle: const Text('Change the app theme'),
+            subtitle: const Text('App theme'),
             trailing: sIsDark.watch(context)
                 ? const FaIcon(FontAwesomeIcons.moon)
                 : const FaIcon(FontAwesomeIcons.sun),
           ),
 
           // Change themecolor ListTile.
-          ListTile(
-            onTap: () {
-              // Whether the user is a sneak peeker or not, change the color.
-              sIsGreen.value = !sIsGreen.value;
-              // If the user is not a sneak peeker, update the color in the
-              // Firestore database as well.
-              if (!ref.watch(isSneakPeekerProvider)) {
-                FirebaseService(ref).updateThemeColor((Object error) {
-                  // If anything goes wrong:
-                  showErrorSnack(context, error);
-                }, (String success) {
-                  // If all goes well: Do nothing.
-                });
-              }
-            },
-            title: sIsGreen.watch(context)
-                ? const Text('Green Money')
-                : const Text('Espresso'),
-            subtitle: const Text('Change the app colors'),
-            trailing: sIsGreen.watch(context)
-                ? const FaIcon(FontAwesomeIcons.moneyBills)
-                : const FaIcon(FontAwesomeIcons.mugHot),
-          ),
+          // ListTile(
+          //   onTap: () {
+          //     // Whether the user is a sneak peeker or not, change the color.
+          //     sIsGreen.value = !sIsGreen.value;
+          //     // If the user is not a sneak peeker, update the color in the
+          //     // Firestore database as well.
+          //     if (!ref.watch(isSneakPeekerProvider)) {
+          //       FirebaseService(ref).updateThemeColor((Object error) {
+          //         // If anything goes wrong:
+          //         showErrorSnack(context, error);
+          //       }, (String success) {
+          //         // If all goes well: Do nothing.
+          //       });
+          //     }
+          //   },
+          //   title: sIsGreen.watch(context)
+          //       ? const Text('Green Money')
+          //       : const Text('Espresso'),
+          //   subtitle: const Text('Change the app colors'),
+          //   trailing: sIsGreen.watch(context)
+          //       ? const FaIcon(FontAwesomeIcons.moneyBills)
+          //       : const FaIcon(FontAwesomeIcons.mugHot),
+          // ),
 
           // Sign out listtile.
           ListTile(
@@ -137,7 +137,7 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
               }
             },
             title: const Text('SIGN OUT'),
-            subtitle: const Text('GO BACK TO LOGIN'),
+            subtitle: const Text('BACK TO LOGIN'),
             trailing: const FaIcon(
               FontAwesomeIcons.personWalkingDashedLineArrowRight,
             ),
