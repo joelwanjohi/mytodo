@@ -44,7 +44,7 @@ class SearchTaskModalState extends ConsumerState<SearchTaskModal> {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Text(
-            'Search ur task',
+            'Search Task',
             style: TextStyle(
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
