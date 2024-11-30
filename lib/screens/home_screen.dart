@@ -47,7 +47,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 const Text(
-                  'Get UR Task Done',
+                  'Task',
                   style: TextStyle(
                     fontSize: 24.0,
                     fontWeight: FontWeight.bold,
