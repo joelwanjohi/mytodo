@@ -166,46 +166,46 @@ class TaskCardState extends ConsumerState<TaskCard> {
                             Text(widget.task.category ?? 'No Category'),
                             Row(
                               children: <Widget>[
-                                IconButton(
-                                  onPressed: () async {
-                                    await showModalBottomSheet<void>(
-                                      showDragHandle: true,
-                                      isScrollControlled: true,
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return Column(
-                                          mainAxisSize: MainAxisSize.min,
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: <Widget>[
-                                            const Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: <Widget>[
-                                                Text(
-                                                  'Focus Mode',
-                                                  style: TextStyle(
-                                                    fontSize: 24.0,
-                                                    fontWeight: FontWeight.bold,
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                            const Divider(
-                                              thickness: 2,
-                                            ),
-                                            const SizedBox(height: 8.0),
-                                            TimePickerDialog(
-                                              initialTime: TimeOfDay.now(),
-                                            ),
-                                          ],
-                                        );
-                                      },
-                                    );
-                                  },
-                                 icon: const FaIcon(FontAwesomeIcons.solidMoon)
+                                // IconButton(
+                                //   onPressed: () async {
+                                //     await showModalBottomSheet<void>(
+                                //       showDragHandle: true,
+                                //       isScrollControlled: true,
+                                //       context: context,
+                                //       builder: (BuildContext context) {
+                                //         return Column(
+                                //           mainAxisSize: MainAxisSize.min,
+                                //           crossAxisAlignment:
+                                //               CrossAxisAlignment.start,
+                                //           children: <Widget>[
+                                //             const Row(
+                                //               mainAxisAlignment:
+                                //                   MainAxisAlignment.center,
+                                //               children: <Widget>[
+                                //                 Text(
+                                //                   'Focus Mode',
+                                //                   style: TextStyle(
+                                //                     fontSize: 24.0,
+                                //                     fontWeight: FontWeight.bold,
+                                //                   ),
+                                //                 ),
+                                //               ],
+                                //             ),
+                                //             const Divider(
+                                //               thickness: 2,
+                                //             ),
+                                //             const SizedBox(height: 8.0),
+                                //             TimePickerDialog(
+                                //               initialTime: TimeOfDay.now(),
+                                //             ),
+                                //           ],
+                                //         );
+                                //       },
+                                //     );
+                                //   },
+                                // //  icon: const FaIcon(FontAwesomeIcons.solidMoon)
 
-                                ),
+                                // ),
                                 const SizedBox(width: 8.0),
                                 Column(
                                   crossAxisAlignment: CrossAxisAlignment.end,
