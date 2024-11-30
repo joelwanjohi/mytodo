@@ -56,7 +56,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
               : isDarkMode
                   ? cFlexSchemeDark().outline
                   : cFlexSchemeLight().outline,
-          width: 2.0,
+          width: 0.0,
         ),
       ),
       child: Stack(
@@ -88,7 +88,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
                   ),
                 ),
                 Expanded(
-                  flex: 15,
+                  flex: 350,
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 24.0),
                     child: Column(
@@ -203,7 +203,7 @@ class TaskCardState extends ConsumerState<TaskCard> {
                                       },
                                     );
                                   },
-                                 icon: const FaIcon(FontAwesomeIcons.eyeSlash)
+                                 icon: const FaIcon(FontAwesomeIcons.solidMoon)
 
                                 ),
                                 const SizedBox(width: 8.0),
