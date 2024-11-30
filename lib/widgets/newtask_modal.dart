@@ -73,7 +73,7 @@ class NewTaskModalState extends ConsumerState<NewTaskModal> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Create new sh_t to do',
+                    'Create a Task',
                     style: TextStyle(
                       fontSize: 24.0,
                       fontWeight: FontWeight.bold,
@@ -92,7 +92,7 @@ class NewTaskModalState extends ConsumerState<NewTaskModal> {
                   ref.read(titleProvider.notifier).state = newTitle;
                 },
                 decoration: const InputDecoration(
-                  labelText: 'New Task Title',
+                  labelText: 'Title',
                 ),
               ),
               const SizedBox(height: 8.0),
