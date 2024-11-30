@@ -50,7 +50,7 @@ class SearchTaskModalState extends ConsumerState<SearchTaskModal> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Divider(thickness: 1.0),
+          // const Divider(thickness: 1.0),
           const SizedBox(height: 16.0),
           TextField(
             controller: searchController,
@@ -58,7 +58,7 @@ class SearchTaskModalState extends ConsumerState<SearchTaskModal> {
               ref.read(searchTaskProvider.notifier).state = value;
             },
             decoration: const InputDecoration(
-              prefixIcon: Icon(Icons.search),
+              labelText: 'Enter keyword',
             ),
           ),
           const SizedBox(height: 16.0),
@@ -69,7 +69,7 @@ class SearchTaskModalState extends ConsumerState<SearchTaskModal> {
                   onPressed: () {
                     Navigator.pop(context);
                   },
-                  child: const Text('CANCEL'),
+                  child: const Text('Cancel'),
                 ),
               ),
               const SizedBox(width: 16.0),

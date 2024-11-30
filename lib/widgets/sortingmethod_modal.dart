@@ -38,7 +38,7 @@ class SortingMethodModalState extends ConsumerState<SortingMethodModal> {
               fontWeight: FontWeight.bold,
             ),
           ),
-          const Divider(thickness: 4.0),
+          const Divider(thickness: 1.0),
           const SizedBox(height: 8.0),
           const Row(
             children: <Widget>[
@@ -54,7 +54,7 @@ class SortingMethodModalState extends ConsumerState<SortingMethodModal> {
           const SizedBox(height: 16.0),
           const Row(
             children: <Widget>[
-              SortTaskAscendingChoiceSegmentedButton(),
+              // SortTaskAscendingChoiceSegmentedButton(),
             ],
           ),
           const SizedBox(height: 16.0),
@@ -241,42 +241,42 @@ class SortTaskDateChoiceSegmentedButtonState
   }
 }
 
-class SortTaskAscendingChoiceSegmentedButton extends ConsumerStatefulWidget {
-  const SortTaskAscendingChoiceSegmentedButton({super.key});
+// class SortTaskAscendingChoiceSegmentedButton extends ConsumerStatefulWidget {
+//   const SortTaskAscendingChoiceSegmentedButton({super.key});
 
-  @override
-  ConsumerState<SortTaskAscendingChoiceSegmentedButton> createState() {
-    return SortTaskAscendingChoiceSegmentedButtonState();
-  }
-}
+//   @override
+//   ConsumerState<SortTaskAscendingChoiceSegmentedButton> createState() {
+//     return SortTaskAscendingChoiceSegmentedButtonState();
+//   }
+// }
 
-class SortTaskAscendingChoiceSegmentedButtonState
-    extends ConsumerState<SortTaskAscendingChoiceSegmentedButton> {
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: SegmentedButton<SortOrder>(
-        selected: ref.watch(sortOrderCategoryProvider),
-        onSelectionChanged: (Set<SortOrder> newSortOrderSelection) {
-          ref.read(sortOrderCategoryProvider.notifier).state =
-              newSortOrderSelection;
-          Logger().w('After making choice: $newSortOrderSelection');
-          Logger().w(ref.watch(isDescendingProvider));
-        },
-        segments: const <ButtonSegment<SortOrder>>[
-          ButtonSegment<SortOrder>(
-            value: SortOrder.ascending,
-            label: Text('Ascending'),
-          ),
-          ButtonSegment<SortOrder>(
-            value: SortOrder.descending,
-            label: Text('Descending'),
-          ),
-        ],
-      ),
-    );
-  }
-}
+// class SortTaskAscendingChoiceSegmentedButtonState
+//     extends ConsumerState<SortTaskAscendingChoiceSegmentedButton> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Expanded(
+//       child: SegmentedButton<SortOrder>(
+//         selected: ref.watch(sortOrderCategoryProvider),
+//         onSelectionChanged: (Set<SortOrder> newSortOrderSelection) {
+//           ref.read(sortOrderCategoryProvider.notifier).state =
+//               newSortOrderSelection;
+//           Logger().w('After making choice: $newSortOrderSelection');
+//           Logger().w(ref.watch(isDescendingProvider));
+//         },
+//         segments: const <ButtonSegment<SortOrder>>[
+//           ButtonSegment<SortOrder>(
+//             value: SortOrder.ascending,
+//             label: Text('Ascending'),
+//           ),
+//           ButtonSegment<SortOrder>(
+//             value: SortOrder.descending,
+//             label: Text('Descending'),
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+// }
 
 class RemoveAllSorts extends StatelessWidget {
   const RemoveAllSorts({
