@@ -54,7 +54,8 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                   ),
                 ),
                 const SizedBox(width: 24.0),
-                Text(ref.watch(dateProvider)),
+                Text(ref.watch(dateProvider),style: TextStyle(
+                    fontSize: 10.0)),
                 if (isSearchPerformed)
                   Row(
                     children: <Widget>[
