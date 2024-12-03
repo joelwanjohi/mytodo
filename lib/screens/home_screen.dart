@@ -166,9 +166,9 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                     //       ),
                     //     );
                     //   },
-                    //   // icon: const Icon(
-                    //   //   FontAwesomeIcons.stopwatch20,
-                    //   // ),
+                    //   icon: const Icon(
+                    //     FontAwesomeIcons.stopwatch20,
+                    //   ),
                     // ),
                     IconButton(
                       onPressed: () {
@@ -181,8 +181,8 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                           },
                         );
                       },
-                      icon: FaIcon(
-                        ref.watch(smileyProvider),
+                      icon: const Icon(
+                        FontAwesomeIcons.stopwatch20,
                       ),
                     ),
                   ],
