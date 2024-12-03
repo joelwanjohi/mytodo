@@ -49,7 +49,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                 const Text(
                   'Task',
                   style: TextStyle(
-                    fontSize: 24.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -217,7 +217,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                         );
                       },
                       icon: const Icon(
-                        FontAwesomeIcons.filter,
+                        FontAwesomeIcons.sortAlphaDown,
                       ),
                     ),
                   ],
@@ -238,7 +238,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
             );
           },
           child: const Icon(
-            FontAwesomeIcons.plus,
+            FontAwesomeIcons.circlePlus,
             size: 32.0,
           ),
         ),
