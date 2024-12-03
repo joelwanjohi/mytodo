@@ -80,7 +80,7 @@ class SplashScreenState extends ConsumerState<SplashScreen> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16.0),
                   child: Image.asset(
-                    'assets/images/gsdIcon.png',
+                    'assets/images/mytodo.jpeg',
                     height: 72.0,
                     width: 72.0,
                   ),
