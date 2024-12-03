@@ -48,6 +48,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               children: <Widget>[
                 const Text(
                   'Tasks List',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
