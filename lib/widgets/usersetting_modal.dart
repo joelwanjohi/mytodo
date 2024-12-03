@@ -64,9 +64,9 @@ class UserSettingsModalState extends ConsumerState<UserSettingsModal> {
                 );
               }
             },
-            title: Text(ref.watch(displayNameProvider)),
-            subtitle: const Text('profile emoji'),
-            trailing: FaIcon(ref.watch(smileyProvider)),
+            // title: Text(ref.watch(displayNameProvider)),
+            // subtitle: const Text('profile emoji'),
+            // trailing: FaIcon(ref.watch(smileyProvider)),
           ),
 
           // Change thememode ListTile.

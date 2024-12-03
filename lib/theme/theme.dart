@@ -127,7 +127,6 @@ Computed<ThemeData> cThemeDark = computed(() {
     useMaterial3: true,
     swapLegacyOnMaterial3: true,
     fontFamily: 'Times New Roman',
-
   );
 });
 

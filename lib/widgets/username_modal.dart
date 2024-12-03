@@ -44,7 +44,7 @@ class UsernameModalState extends ConsumerState<UsernameModal> {
           ),
           const Divider(thickness: 4.0),
           const SizedBox(height: 8.0),
-          const SmileyIconRow(),
+          // const SmileyIconRow(),
           const SizedBox(height: 16),
           TextField(
             onChanged: (String value) {

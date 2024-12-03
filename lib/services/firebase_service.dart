@@ -191,7 +191,7 @@ class FirebaseService {
     ref.read(displayNameProvider.notifier).state = 'SNEAK PEEKER';
     ref.read(isSneakPeekerProvider.notifier).state = true;
     ref.read(photoURLProvider.notifier).state = 'handpeaceregular';
-    ref.read(smileyProvider.notifier).state = FontAwesomeIcons.handPeace;
+    // ref.read(smileyProvider.notifier).state = FontAwesomeIcons.handPeace;
     Logs.sneakPeekComplete();
     onSuccess('Enjoy your sneak peek. Your data will not be stored.');
   }
@@ -443,7 +443,7 @@ class FirebaseService {
       ..invalidate(displayNameProvider)
       ..invalidate(emailProvider)
       ..invalidate(photoURLProvider)
-      ..invalidate(smileyProvider)
+      // ..invalidate(smileyProvider)
       ..invalidate(isSneakPeekerProvider)
       ..invalidate(titleProvider)
       ..invalidate(descriptionProvider)

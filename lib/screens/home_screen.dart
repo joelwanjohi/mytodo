@@ -182,7 +182,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
                         );
                       },
                       icon: const Icon(
-                        FontAwesomeIcons.stopwatch20,
+                        FontAwesomeIcons.user,
                       ),
                     ),
                   ],
