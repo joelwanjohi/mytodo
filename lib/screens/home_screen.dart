@@ -76,7 +76,7 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               ],
             ),
           ),
-          centerTitle: true,
+          centerTitle: false,
         ),
         body: ResponsiveLayout(
           child: Padding(
