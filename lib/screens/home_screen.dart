@@ -155,21 +155,21 @@ class HomeScreenState extends ConsumerState<HomeScreen> {
               children: <Widget>[
                 Row(
                   children: <Widget>[
-                    IconButton(
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text(
-                              'Timer is coming!',
-                            ),
-                            behavior: SnackBarBehavior.floating,
-                          ),
-                        );
-                      },
-                      icon: const Icon(
-                        FontAwesomeIcons.stopwatch20,
-                      ),
-                    ),
+                    // IconButton(
+                    //   onPressed: () {
+                    //     ScaffoldMessenger.of(context).showSnackBar(
+                    //       const SnackBar(
+                    //         content: Text(
+                    //           'Timer is coming!',
+                    //         ),
+                    //         behavior: SnackBarBehavior.floating,
+                    //       ),
+                    //     );
+                    //   },
+                    //   // icon: const Icon(
+                    //   //   FontAwesomeIcons.stopwatch20,
+                    //   // ),
+                    // ),
                     IconButton(
                       onPressed: () {
                         showModalBottomSheet<Widget>(
