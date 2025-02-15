@@ -6,7 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mytodo/models/task_model.dart';
 import 'package:mytodo/providers/date_provider.dart';
 import 'package:mytodo/providers/issearchperformed_provider.dart';
-import 'package:mytodo/providers/smiley_provider.dart';
+
 import 'package:mytodo/providers/tasklist_provider.dart';
 import 'package:mytodo/services/firestore_service%20.dart';
 import 'package:mytodo/theme/theme.dart';

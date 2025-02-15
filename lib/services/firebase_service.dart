@@ -4,7 +4,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:mytodo/providers/category_provider.dart';
 import 'package:mytodo/providers/date_provider.dart';
 import 'package:mytodo/providers/description_provider.dart';
@@ -14,7 +14,7 @@ import 'package:mytodo/providers/firebase_provider.dart';
 import 'package:mytodo/providers/firestore_provider.dart';
 import 'package:mytodo/providers/iscompleted_provider.dart';
 import 'package:mytodo/providers/photourl_provider.dart';
-import 'package:mytodo/providers/smiley_provider.dart';
+
 import 'package:mytodo/providers/sneakpeek_provider.dart';
 import 'package:mytodo/providers/sortingmethod_provider.dart';
 import 'package:mytodo/providers/tasklist_provider.dart';
